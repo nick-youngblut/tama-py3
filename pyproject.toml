@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tama"
+version = "0.1.0"
+description = "Transcriptome Annotation by Modular Algorithms"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "GenomeRIK", email = "GenomeRIK@gmail.com"}]
+dependencies = [
+    "biopython",
+    "pysam",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+
+[project.scripts]
+tama-collapse = "tama.cli_collapse:main"
+tama-merge = "tama.cli_merge:main"

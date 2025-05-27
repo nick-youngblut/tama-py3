@@ -1,0 +1,3 @@
+[console_scripts]
+tama-collapse = tama.cli_collapse:main
+tama-merge = tama.cli_merge:main

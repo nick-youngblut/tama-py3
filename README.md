@@ -3,6 +3,13 @@ Transcriptome Annotation by Modular Algorithms
 
 This software was designed for processing Iso-Seq data and other long read transcriptome data. 
 
+## Installation
+
+TAMA requires Python 3.9 or newer. Using [uv](https://github.com/astral-sh/uv) you can install the package with:
+```bash
+uv pip install tama
+```
+
 See wiki for manual:
 https://github.com/GenomeRIK/tama/wiki
 

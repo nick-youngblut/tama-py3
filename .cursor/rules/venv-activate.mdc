@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Always make sure that the uv venv for this codebase is activated prior to running any code.

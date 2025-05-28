@@ -37,14 +37,14 @@ prev_time = start_time
 
 ap = argparse.ArgumentParser(description='This script merges transcriptomes.')
 
-ap.add_argument('-f', type=str, nargs=1, help='File list')
-ap.add_argument('-p', type=str, nargs=1, help='Output prefix')
+ap.add_argument('-f', type=str, nargs=1, help='File list', required=True)
+ap.add_argument('-p', type=str, nargs=1, help='Output prefix', required=True)
 
-ap.add_argument('-e', type=str, nargs=1, help='Collapse exon ends flag: common_ends or longest_ends  (Default is common_ends)')
+ap.add_argument('-e', type=str, nargs=1, help='Collapse exon ends flag: common_ends or longest_ends  (Default is common_ends)', default="common_ends")
 
-ap.add_argument('-a', type=str, nargs=1, help='5 prime threshold (Default is 10)')
-ap.add_argument('-m', type=str, nargs=1, help='Exon ends threshold/ splice junction threshold (Default is 10)')
-ap.add_argument('-z', type=str, nargs=1, help='3 prime threshold (Default is 10)')
+ap.add_argument('-a', type=str, nargs=1, help='5 prime threshold (Default is 10)', default=10)
+ap.add_argument('-m', type=str, nargs=1, help='Exon ends threshold/ splice junction threshold (Default is 10)', default=10)
+ap.add_argument('-z', type=str, nargs=1, help='3 prime threshold (Default is 10)', default=10)
 
 ap.add_argument('-d', type=str, nargs=1, help='Flag for merging duplicate transcript groups (default no_merge quits when duplicates are found, merge_dup will merge duplicates)')
 
